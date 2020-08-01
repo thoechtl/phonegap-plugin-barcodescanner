@@ -358,6 +358,7 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 - (void)openDialog {
+    // fix https://github.com/phonegap/phonegap-plugin-barcodescanner/issues/814
     [self.viewController setModalPresentationStyle:UIModalPresentationFullScreen];
     [self.parentViewController presentViewController:self.viewController animated: NO completion:nil];
 }
