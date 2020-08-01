@@ -358,10 +358,8 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 - (void)openDialog {
-    [self.parentViewController
-     presentViewController:self.viewController
-     animated:self.isTransitionAnimated completion:nil
-     ];
+    [self.viewController setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self.parentViewController presentViewController:self.viewController animated: NO completion:nil];
 }
 
 //--------------------------------------------------------------------------
